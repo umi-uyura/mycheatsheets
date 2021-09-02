@@ -1,0 +1,9 @@
+#
+# net (Windows)
+#
+
+# PostgreSQL service start/stop
+# * require administrator privilege
+# * service name depends on the environment, use `sc` command to find the service.
+net start postgresql-x64-10
+net stop postgresql-x64-10

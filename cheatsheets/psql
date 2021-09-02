@@ -1,0 +1,23 @@
+#
+# psql - PostgreSQL interactive terminal
+#
+
+
+
+#
+# meta command
+#
+
+# connect database
+¥c <database>
+
+# list all databases
+¥l
+¥l+               # add detail colums
+¥l <pattern>      # display a list of databases that match the pattern
+
+# list tables
+¥d
+
+# copy
+¥copy ...

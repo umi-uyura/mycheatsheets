@@ -1,0 +1,15 @@
+#
+# nodist
+#
+
+nodist ls
+nodist ds
+nodist add <version>
+nodist + <version>
+nodist rm <version>
+nodist - <version>
+nodist 12.x
+nodist global <version>
+nodist local <version>
+nodist npm match
+nodist npm <version>

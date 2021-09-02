@@ -1,0 +1,9 @@
+#
+# sc - Service Control Manager Configuration Tool (Windows)
+#
+
+# Inquire about the status of the service
+sc query postgresql-x64-10
+
+# Find services that contain 'postgres'
+sc query state= all | findstr postgres

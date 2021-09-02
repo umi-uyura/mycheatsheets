@@ -1,0 +1,27 @@
+#
+# apt - Advanced package tool (Ubuntu)
+#
+
+# List packages
+apt list                # can be installed
+apt list --installed
+apt list --upgradable
+
+# Search package
+apt search <package>
+
+# Show package detail
+apt show <package>
+
+# Install package
+sudo apt install <package>
+
+# Remove package
+sudo apt remove <package>
+
+# Upgrade package
+sudo apt update     # Update package index
+sudo apt upgrade    # Upgrade packages
+
+# Upgrade and remove packages
+sudo apt full-upgrade

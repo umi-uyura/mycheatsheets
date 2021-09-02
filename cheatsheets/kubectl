@@ -1,0 +1,23 @@
+#
+# kubectl - Kubernetes control
+#
+
+# List pods
+kubectl get pod
+kubectl get po
+kubectl get po -o wide                # Show more information
+
+# Dump log
+kubectl logs <pod name>
+kubectl logs -f <pod name>            # tail -f
+kubectl logs <pod name> --since=1h    # Last hour
+kubectl logs <pod name> --tail=10     # Latest 10 logs
+
+#
+kubectl describe [<pod name>|<>]
+
+# Getting a shell to a container
+kubectl exec -it <container> /bin/bash
+
+# Delete
+kubectl delete [pod|rs]

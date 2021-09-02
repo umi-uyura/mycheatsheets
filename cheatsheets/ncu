@@ -1,0 +1,21 @@
+#
+# ncu - npm-check-updates
+#
+
+# Check current project packages
+ncu
+
+# Check global packages
+ncu -g
+
+# Check update and upgrade package.json
+ncu -u
+
+# Set the number of simultaneous connections to 1 (default: 8)
+ncu --concurrency 1
+
+# Set a timeout (default: 30000ms)
+ncu --timeout <ms>
+
+# Specify the target version to upgrade (default: "latest")
+ncu --target latest (or newest, greatest, minor, patch)

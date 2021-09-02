@@ -1,0 +1,10 @@
+#
+# nvm - Node Version Manager
+#
+
+nvm ls
+
+nvm ls-remote
+
+nvm install --lts
+nvm install

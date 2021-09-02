@@ -1,0 +1,21 @@
+#
+# az - Azure CLI
+#
+# https://docs.microsoft.com/ja-jp/cli/azure/reference-index?view=azure-cli-latest
+#
+
+az login
+
+# Show information of login user
+az account show
+
+## extension
+
+az extension list
+az extension add --name <extension>
+az extension update --name <extension>
+az extension remove --name <extension>
+
+## IoT
+
+az iot hub device-identity connection-string show --hub-name <iot hub name> --device-id <device id> --output table

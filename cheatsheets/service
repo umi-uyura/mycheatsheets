@@ -1,0 +1,9 @@
+#
+# service (Linux)
+#
+
+sudo service <service> start
+sudo service <service> stop
+sudo service <service> restart
+service <service> status
+service --status-all

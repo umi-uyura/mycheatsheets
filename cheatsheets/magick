@@ -1,0 +1,9 @@
+#
+# magick - ImageMagick
+#
+
+# Convert transparent PNG to non-transparent PNG
+convert <target.png>  \( +clone -alpha opaque -fill white -colorize 100% \) +swap -geometry +0+0 -compose Over -composite -alpha off <output.png>
+
+# Cut out the specified page from PDF
+convert <target.pdf>[<page>] <output.pdf>

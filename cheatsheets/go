@@ -1,0 +1,9 @@
+#
+# go
+#
+
+# Install or Update specific package
+go get -u <module>
+
+# Update all package
+go get -u
