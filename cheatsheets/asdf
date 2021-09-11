@@ -1,0 +1,47 @@
+#
+# asdf
+#
+
+# Update latest stable release
+# *If you are using a package manager such as Homebrew, update via that package manager
+asdf update
+
+
+## Manage plugins - `asdf plugin`
+#
+
+# List plugins
+asdf plugin list        # list installed plugins
+asdf plugin list all    # List all plugins registered on asdf-plugins repository
+
+# Install and remove plugin
+asdf plugin add <plugin name> [<git-url>]
+asdf plugin remove <plugin name>
+
+# Update plugin
+asdf plugin update <name>
+asdf plugin update --all
+
+
+## Manage packages - `asdf`
+#
+
+# List all available package versions
+asdf list all <package>
+asdf list all <package> <version>
+
+# Install and uninstall package
+asdf install <package> <version>
+asdf uninstall <package> <version>
+
+# Set version
+asdf global <name> <version>    # global ($HOME/.tool-versions)
+asdf shell <name> <version>     # current shell ($ASDF_<LANG>_VERSION)
+asdf local <name> <version>     # local ($PWD/.tool-versions)
+
+# Show current version
+asdf current
+asdf current <name>
+
+# Recreate shims
+asdf reshim <name> <version>
