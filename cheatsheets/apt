@@ -25,3 +25,6 @@ sudo apt upgrade    # Upgrade packages
 
 # Upgrade and remove packages
 sudo apt full-upgrade
+
+# 
+sudo apt autoremove
