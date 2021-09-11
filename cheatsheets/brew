@@ -1,0 +1,23 @@
+#
+# brew - Homebrew (macOS/Linux)
+#
+
+brew install <package>
+brew show <package>
+brew uninstall <package>
+
+# Find packages
+brew search <keyword>
+
+# Display outdated package
+brew outdated
+
+# Upgrade package
+brew upgrade
+
+
+## Homebrwe cask support
+#
+
+brew cask outdated
+brew upgrade --cask
