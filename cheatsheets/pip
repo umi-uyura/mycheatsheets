@@ -1,0 +1,7 @@
+#
+# pip - Python Package Index
+#
+
+pip install <package>
+pip uninstall <package>
+pip install --upgrade <package>
