@@ -2,6 +2,12 @@
 # psql - PostgreSQL interactive terminal
 #
 
+# Connect
+psql -h <host> -U <user>               # DBMS
+psql -h <host> -U <user> <database>    # database
+
+# execute sql file
+psql -f <sql file path> -h <host> -U <user> -d <database>
 
 
 #
@@ -9,15 +15,18 @@
 #
 
 # connect database
-¥c <database>
+\c <database>
 
 # list all databases
-¥l
-¥l+               # add detail colums
-¥l <pattern>      # display a list of databases that match the pattern
+\l
+\l+               # add detail colums
+\l <pattern>      # display a list of databases that match the pattern
 
 # list tables
-¥d
+\d
 
 # copy
-¥copy ...
+\copy ...
+
+# execute sql file
+\i <sql file path>
