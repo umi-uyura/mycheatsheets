@@ -1,0 +1,28 @@
+#
+# choco - Chocolatey cli
+#
+
+#
+# ** ... need administrator privileges
+#
+
+# List installed packages
+choco list -l
+
+# Saerch package
+choco search <keyword>
+
+# ** Install package
+choco install <package>
+
+# ** Uninstall package
+choco uninstall <package>
+
+# ** Upgrade package
+choco upgrade <package>
+
+# Check update packages
+choco outdated
+
+# Export all currently installed packages to a file
+choco export <export path>
