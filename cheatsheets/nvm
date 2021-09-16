@@ -2,9 +2,26 @@
 # nvm - Node Version Manager
 #
 
-nvm ls
-
-nvm ls-remote
-
 nvm install --lts
+nvm uninstall --lts
+nvm use --lts
+nvm exec --lts
+nvm run --lts
+nvm ls-remote --lts
+nvm version-remote --lts
+nvm install-latest-npm
+
+
+#
+# nvm for Windows
+#
+
+# Show active version
+nvm current
+
+nvm list
+nvm list available
+
 nvm install
+nvm install lts
+nvm install latest
