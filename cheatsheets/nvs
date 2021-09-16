@@ -1,0 +1,21 @@
+#
+# nvs - Node Version Switcher
+#
+
+nvs ls
+nvs ls-remote
+
+nvs add <version>
+nvs add lts
+nvs add latest
+
+# Set default version
+nvs link <version>
+
+# Set version used by current shell
+nvs use <version>
+
+# Switch to version written in .node-version
+nvs auto
+
+nvs rm <version>
