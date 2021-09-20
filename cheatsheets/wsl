@@ -5,8 +5,9 @@
 wsl --set-default-version 2
 
 wsl --list
-wsl -l
 wsl --list --running
+wsl --list --verbose
+wsl -l
 
 wsl --terminate <distro>
 wsl -t <distro>
