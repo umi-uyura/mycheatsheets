@@ -3,7 +3,7 @@
 #
 
 # Update latest stable release
-# *If you are using a package manager such as Homebrew, update via that package manager
+# * If you are using a package manager such as Homebrew, update via that package manager
 asdf update
 
 
@@ -13,6 +13,7 @@ asdf update
 # List plugins
 asdf plugin list        # list installed plugins
 asdf plugin list all    # List all plugins registered on asdf-plugins repository
+asdf plugin list all | grep <name>  # Find plugin in asdf-plugins repository
 
 # Install and remove plugin
 asdf plugin add <plugin name> [<git-url>]
