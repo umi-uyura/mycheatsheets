@@ -27,6 +27,9 @@ asdf plugin update --all
 ## Manage packages - `asdf`
 #
 
+# List installed package versions
+asdf list
+
 # List all available package versions
 asdf list all <package>
 asdf list all <package> <version>
