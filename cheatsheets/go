@@ -2,6 +2,10 @@
 # go
 #
 
+# Install package
+go install <package url>@<version>
+go install <package url>@latest
+
 # Install or Update specific package
 go get -u <module>
 
