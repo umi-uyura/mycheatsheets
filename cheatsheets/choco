@@ -20,6 +20,7 @@ choco uninstall <package>
 
 # ** Upgrade package
 choco upgrade <package>
+choco upgrade all
 
 # Check update packages
 choco outdated
