@@ -1,0 +1,16 @@
+#
+# doskey
+#
+# https://docs.microsoft.com/ja-jp/windows-server/administration/windows-commands/doskey
+#
+
+# List all macros
+doskey /macros
+
+# Register command
+# - `$*` ... parameter
+# - `$t` ... command separator
+dockey <macro>=<command>
+
+# Bulk registration
+dockey /macrofile=<path>
