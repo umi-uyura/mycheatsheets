@@ -28,3 +28,6 @@ sudo apt full-upgrade
 
 # 
 sudo apt autoremove
+
+# Show package dependencies
+apt depends <package>
