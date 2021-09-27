@@ -1,0 +1,17 @@
+#
+# tfenv
+#
+
+
+tfenv install <version>
+tfenv use <version>
+tfenv uninstall <version>
+
+# List installed versions
+tfenv list
+
+# List avalable versions
+tfenv list-remote
+
+# Upgrad tfenv
+git --git-dir=~/.tfenv/.git pull
