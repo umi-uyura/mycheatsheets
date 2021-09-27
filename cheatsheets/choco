@@ -8,22 +8,32 @@
 
 # List installed packages
 choco list -l
+clist
 
 # Saerch package
 choco search <keyword>
 
 # ** Install package
 choco install <package>
+cinst <package>
 
 # ** Uninstall package
 choco uninstall <package>
+cuninst <package>
 
 # ** Upgrade package
 choco upgrade <package>
+cup <package>
 choco upgrade all
 
 # Check update packages
 choco outdated
+choco outdated --ignore-pinned
+
+# ** Pin package
+choco pin list
+choco pin add -n <package> [--version="<version>"] [--reason="<reason>"]
+choco pin remove -n <package>
 
 # Export all currently installed packages to a file
 choco export <export path>
