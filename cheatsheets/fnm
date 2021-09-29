@@ -1,0 +1,31 @@
+#
+# fnm - Fast Node Manager
+# https://github.com/Schniz/fnm
+#
+
+# List installed versions
+fnm list
+fnm ls
+
+# List remote versions available for install
+fnm list-remote
+fnm ls-remote
+
+# Install version
+fnm install <version>
+fnm install             # Use .node-version in current directory
+
+# Uninstall version
+fnm uninstall <version>
+
+# Show current version
+fnm current
+
+# Set default version
+fnm default <version>
+
+# Set version used by current shell
+fnm use <version>
+
+# Execute command with specified version
+fnm exec --using=<version> <command>
