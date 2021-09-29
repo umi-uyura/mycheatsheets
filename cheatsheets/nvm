@@ -1,22 +1,48 @@
 #
 # nvm - Node Version Manager
 #
+# https://github.com/nvm-sh/nvm
+#
 
+# Download and install a <version>
+nvm install <version>
 nvm install --lts
+
+# Uninstall a version
+nvm uninstall <version>
 nvm uninstall --lts
+
+# Modify PATH to use <version>
+nvm use <version>
 nvm use --lts
-nvm exec --lts
-nvm run --lts
+
+# Display currently activated version of Node
+nvm current
+
+# List installed versions
+nvm ls
+
+# List remote versions available for install
+nvm ls-remote
 nvm ls-remote --lts
-nvm version-remote --lts
+
+# Resolve the given description to a single remote version
+nvm version-remote          # Latest version
+nvm version-remote --lts    # Latest LTS version
+
+# Attempt to upgrade to the latest working `npm` on the current node version
 nvm install-latest-npm
+
+# Reinstall global `npm` packages contained in <version> to current version
+nvm reinstall-packages <version>
 
 
 #
 # nvm for Windows
 #
+# https://github.com/coreybutler/nvm-windows
+#
 
-# Show active version
 nvm current
 
 nvm list
@@ -25,3 +51,9 @@ nvm list available
 nvm install
 nvm install lts
 nvm install latest
+
+nvm uninstall <version>
+
+nvm use <version>
+nvm use lts
+nvm use latest
