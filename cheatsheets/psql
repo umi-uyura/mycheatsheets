@@ -6,27 +6,30 @@
 psql -h <host> -U <user>               # DBMS
 psql -h <host> -U <user> <database>    # database
 
-# execute sql file
+# Execute sql file
 psql -f <sql file path> -h <host> -U <user> -d <database>
+
+# Create database
+createdb -h <host> -U <user> <database> [description]
 
 
 #
 # meta command
 #
 
-# connect database
+# Connect database
 \c <database>
 
-# list all databases
+# List all databases
 \l
 \l+               # add detail colums
 \l <pattern>      # display a list of databases that match the pattern
 
-# list tables
+# List tables
 \d
 
-# copy
+# Copy
 \copy ...
 
-# execute sql file
+# Execute sql file
 \i <sql file path>
