@@ -1,0 +1,23 @@
+#
+# sdk - SDKMAN!
+# https://sdkman.io/
+#
+
+sdk list
+sdk ls
+
+sdk list <candidate>
+
+sdk install <candidate> [version]
+sdk i <candidate> [version]
+
+sdk uninstall <candidate> [version]
+sdk rm <candidate> [version]
+
+sdk current [candidate]
+
+sdk default <candidate> [version]
+
+sdk use <candidate> [version]
+
+sdk update
