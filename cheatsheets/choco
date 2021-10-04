@@ -41,3 +41,7 @@ choco pin remove -n <package>
 
 # Export all currently installed packages to a file
 choco export <export path>
+
+# ** Install from config file
+choco install <config path>
+cinst <config path>
