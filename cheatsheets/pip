@@ -3,5 +3,6 @@
 #
 
 pip install <package>
-pip uninstall <package>
 pip install --upgrade <package>
+pip uninstall <package>
+pip list --outdated
