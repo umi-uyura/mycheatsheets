@@ -20,13 +20,34 @@ createdb -h <host> -U <user> <database> [description]
 # Connect database
 \c <database>
 
-# List all databases
-\l
-\l+               # add detail colums
-\l <pattern>      # display a list of databases that match the pattern
+# Quit connection
+\q
 
-# List tables
-\d
+# Display list / detail
+# example:
+# - \d+ ... add detail columns
+# - \dS ... include system objects
+# - \dS+ ... include system objects and add detail columns
+# - \d <pattern> ... display what matches the pattern
+
+\l                # databases
+\d                # tables, views, sequences
+\dt               # tables
+\dv               # views
+\ds               # sequences
+\dp               # access rights for tables, views, sequences
+\df               # functions
+\df[antw]         #   a ... aggregate
+                  #   n ... normal(?)
+                  #   t ... trigger
+                  #   w ... window
+\dn               # schemas
+\di               # indexes
+\du               # users and roles
+
+# Display definition
+\sv               # view
+\sf               # function
 
 # Copy
 \copy ...
