@@ -17,7 +17,8 @@ apt show <package>
 sudo apt install <package>
 
 # Remove package
-sudo apt remove <package>
+sudo apt remove <package>           # Configuration file remains
+sudo apt remove --purge <package>   # Also delete configuration file
 
 # Upgrade package
 sudo apt update     # Update package index
