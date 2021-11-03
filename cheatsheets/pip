@@ -6,3 +6,5 @@ pip install <package>
 pip install --upgrade <package>
 pip uninstall <package>
 pip list --outdated
+pip freeze > requirements.txt
+pip install -r requirements.txt
