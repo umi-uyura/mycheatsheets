@@ -2,9 +2,22 @@
 # pip - Python Package Index
 #
 
+# Install package
 pip install <package>
+
+# Update package
 pip install --upgrade <package>
+pip install -U <package>
+
+# Uninstall package
 pip uninstall <package>
+
+# List installed packages
+pip list
 pip list --outdated
+
+# Export list of installed packages to file
 pip freeze > requirements.txt
+
+# Install pakcages from file
 pip install -r requirements.txt
