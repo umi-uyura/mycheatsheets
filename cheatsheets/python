@@ -7,7 +7,16 @@
 # After creating virtual environment, execute script to enable it
 # - Windows: <venv>\Scripts\activate.bat
 # - Linux/Mac: source <venv>/bin/activate
+#
+# Create .envrc when using direnv
+#
+# ```
+# layout python
+# source <venv>/bin/activate
+# unset PS1
+# ```
 python -m venv <venv name>
+
 
 # Basic example of server with python
 # Will start a Web Server in the current directory on port 8000
