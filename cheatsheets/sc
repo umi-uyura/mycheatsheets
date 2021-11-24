@@ -13,6 +13,9 @@ sc query postgresql-x64-10
 # Find services that contain 'postgres'
 sc query state= all | findstr postgres
 
+# Display list of service names
+sc query type= service | findstr /B SERVICE_NAME
+
 # Start/Stop/Pause service
 sc start <service name>
 sc stop <service name>
