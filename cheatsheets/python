@@ -22,3 +22,6 @@ python -m venv <venv name>
 # Will start a Web Server in the current directory on port 8000
 python -m http.server 8000      # Python 3
 python -m SimpleHTTPServer      # Python 2
+
+# Generate UUID
+python -c "import uuid; print(uuid.uuid4())"
