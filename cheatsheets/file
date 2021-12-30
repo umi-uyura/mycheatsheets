@@ -1,0 +1,13 @@
+---
+tags: [linux, macos]
+---
+
+#
+# file
+#
+
+# Recursively display file information
+find . -type f -exec file {} \;
+find . -type f -exec file {} \; | grep CRLF     # Display files with CRLF
+find . -type d -name ".venv" -prune -o -exec file {} \;     # Exclude ".venv" directory
+find . -type d -name ".venv" -prune -o -type d -name "lib" -prune -o -type f -exec file {} \;   # Exclude ".venv" and "lib" directory
