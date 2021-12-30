@@ -1,0 +1,22 @@
+---
+tags: [windows, python]
+---
+
+#
+# py - Python launcher
+#
+
+# Launch python
+py <script>             # Launch the latest Python version
+py -3 <script>          # Launch the latest Python 3.x version
+py -2 <script>          # Launch the latest Python 2.x version
+py <x.y> <script>       # Launch the specified Python version
+
+# List available pythons
+py --list               # List the available pythons
+py -0                   # List the available pythons
+py --list-paths         # List with paths
+py -0p                  # List with paths
+
+# Create virtual environments with specified python version
+py -3.8 -m venv .venv
