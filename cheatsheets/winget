@@ -1,0 +1,10 @@
+---
+tags: [windows]
+---
+
+#
+# winget - Windows Package Manager Client
+#
+
+# List available versions
+winget show --versions <query>
