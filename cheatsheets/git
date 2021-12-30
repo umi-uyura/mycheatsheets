@@ -1,0 +1,12 @@
+#
+# Git
+#
+
+# Show config
+git config -l                   # local
+git config --global -l          # global
+git config --system -l          # system
+git config --show-scope -l              # List with scope
+git config --show-scope <attribute>
+git config --show-origin -l             # List with config file
+git config --show-origin <attribute>
