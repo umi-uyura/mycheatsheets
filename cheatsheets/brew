@@ -13,14 +13,19 @@ brew uninstall <package>
 # Find packages
 brew search <keyword>
 
-# Display outdated package
+# Fetch the newest version of Homebrew and all formulae
+brew update
+
+# Display outdated package (Run after `brew update`)
 brew outdated
 
-# Upgrade package
+# Upgrade packages (Run after `brew update`)
 brew upgrade
+brew upgrade <package>
 
 
-## Homebrwe cask support
+#
+# Homebrwe cask support (macOS only)
 #
 
 brew cask outdated
