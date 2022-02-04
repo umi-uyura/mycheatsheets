@@ -17,7 +17,6 @@
 # ```
 python -m venv <venv name>
 
-
 # Basic example of server with python
 # Will start a Web Server in the current directory on port 8000
 python -m http.server 8000      # Python 3
