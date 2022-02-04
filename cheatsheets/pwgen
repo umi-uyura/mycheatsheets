@@ -1,0 +1,17 @@
+---
+tags: [linux,macos]
+---
+
+#
+# pwgen - Automatic Password generation
+#
+
+# - Include at least one capital letter
+# - Include at least one number
+# - Include at least one special symbol
+# - Generate completely random passwords
+# - Don't include ambiguous characters
+# - Length of password is 18 characters
+# - Generate 12 patterns
+# - Display in a single row
+pwgen -cnysB1 18 12
