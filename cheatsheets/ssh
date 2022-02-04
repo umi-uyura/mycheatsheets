@@ -1,0 +1,16 @@
+#
+# ssh - Secure Shell
+#
+
+# Port forwarding
+#   <local> -]-> <ssh server> --> <target>
+ssh <ssh server user>@<ssh server> -L <local port>:<target host>:<target port>
+
+# Remote port forwarding
+#   <local> -]-> <ssh server>
+#      ^--------------|
+ssh <ssh server user>@<ssh server> -R <local port for ssh server>:<local host to connect from ssh server>:<local port to connect from ssh server>
+
+#   <other>  <local> -]-> <ssh server>
+#      ^-----(local)<-]--------|
+ssh <ssh server user>@<ssh server> -R <local port for ssh server>:<other host>:<other host port>
