@@ -7,23 +7,6 @@
 asdf update
 
 
-## Manage plugins - `asdf plugin`
-#
-
-# List plugins
-asdf plugin list        # list installed plugins
-asdf plugin list all    # List all plugins registered on asdf-plugins repository
-asdf plugin list all | grep <name>  # Find plugin in asdf-plugins repository
-
-# Install and remove plugin
-asdf plugin add <plugin name> [<git-url>]
-asdf plugin remove <plugin name>
-
-# Update plugin
-asdf plugin update <name>
-asdf plugin update --all
-
-
 ## Manage packages - `asdf`
 #
 
@@ -49,3 +32,20 @@ asdf current <name>
 
 # Recreate shims
 asdf reshim <name> <version>
+
+
+## Manage plugins - `asdf plugin`
+#
+
+# List plugins
+asdf plugin list        # list installed plugins
+asdf plugin list all    # List all plugins registered on asdf-plugins repository
+asdf plugin list all | grep <name>  # Find plugin in asdf-plugins repository
+
+# Install and remove plugin
+asdf plugin add <plugin name> [<git-url>]
+asdf plugin remove <plugin name>
+
+# Update plugin
+asdf plugin update <name>
+asdf plugin update --all
