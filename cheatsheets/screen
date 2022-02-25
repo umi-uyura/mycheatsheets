@@ -9,8 +9,8 @@ screen -S <name>        # Named session
 # List sessions
 screen -ls
 
-# 
-screen -r <pid>
+# Reattach session
+screen -r <session>
 
 ## Shortcut
 #
