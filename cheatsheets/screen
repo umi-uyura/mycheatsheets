@@ -1,0 +1,24 @@
+#
+# screen - GNU screen
+#
+
+# Create session
+screen
+screen -S <name>        # Named session
+
+# List sessions
+screen -ls
+
+# 
+screen -r <pid>
+
+## Shortcut
+#
+
+Ctrl + a, d             # Detach window
+Ctrl + a, n/p           # Move next/prev window
+Ctrl + a, a             # Switch window
+Ctrl + a, A             # Set window title
+Ctrl + a, "             # Show window list
+Ctrl + a, c             # Create new window
+Ctrl + a, K             # Close window
