@@ -2,5 +2,16 @@
 # curl
 #
 
+# Outputs detail trace
+curl -v https://example.com
+
+# Follow redirects
+curl -L https://example.com
+
 # Post json file
 curl -X POST -H "Content-Type: application/json" -d @<filepath> https://example.com
+
+# Get my global IP address
+curl httpbin.org/ip
+curl inet-ip.info
+curl ifconfig.me
