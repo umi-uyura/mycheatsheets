@@ -7,4 +7,7 @@ tags: [windows]
 #
 
 # List available versions
-winget show --versions <query>
+winget show <query> --versions
+
+# Install specific version
+winget install <query> --version <version>
