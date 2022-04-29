@@ -8,6 +8,9 @@ curl -v https://example.com
 # Follow redirects
 curl -L https://example.com
 
+# Show headers only
+curl -I https://example.com
+
 # Post json file
 curl -X POST -H "Content-Type: application/json" -d @<filepath> https://example.com
 
