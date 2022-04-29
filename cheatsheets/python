@@ -11,7 +11,9 @@
 # source <venv>/bin/activate
 # unset PS1
 # ```
-python -m venv <venv name>      # Create virtual environment
+python -m venv <venv name>              # Create virtual environment
+python -m venv <venv name> --upgrade    # Upgrade to current python version
+python -m venv <venv name> --clear      # Re-create
 
 # Enable venv
 <venv>\Scripts\activate.bat     # Windows
@@ -24,6 +26,9 @@ source <venv>/bin/activate      # Linux/macOS
 # Will start a Web Server in the current directory on port 8000
 python -m http.server 8000      # Python 3
 python -m SimpleHTTPServer      # Python 2
+
+# Pretty print JSON
+python -m json.tool <infile>
 
 # Generate UUID
 python -c "import uuid; print(uuid.uuid4())"
