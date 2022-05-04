@@ -1,3 +1,7 @@
+---
+tags: [linux, macos]
+---
+
 #
 # base64
 #
@@ -7,3 +11,10 @@ echo -n "<base64>" | base64 -d | tr -d '\n' | od -tx1 -An
 
 # Base64 string containing binary to hex string of big-endian 8-byte units
 echo -n "<base64>" | base64 -d | tr -d '\n' | od -tx8 -An --endian=big
+
+# Image encode / decode
+# * To have the image recognized as a Base64 image,
+#   append "data:image/png;base64," before the Base64 string.
+base64 hoge.png > hoge-base64.txt           # Encode
+base64 -w 0 hoge.png > hoge-base64.txt      # Encode without line break
+base64 -d hoge-base64.txt > hoge.png        # Decode
