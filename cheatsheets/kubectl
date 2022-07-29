@@ -1,3 +1,7 @@
+---
+tags: [k8s]
+---
+
 #
 # kubectl - Kubernetes control
 #
@@ -8,16 +12,21 @@ kubectl get po
 kubectl get po -o wide                # Show more information
 
 # Dump log
+# log location: /var/logs/pods/<container>
 kubectl logs <pod name>
 kubectl logs -f <pod name>            # tail -f
 kubectl logs <pod name> --since=1h    # Last hour
 kubectl logs <pod name> --tail=10     # Latest 10 logs
+kubectl logs <pod name> --timestamps=true   # Add timestamp
 
 #
-kubectl describe [<pod name>|<>]
+kubectl describe [<pod name>]
 
-# Getting a shell to a container
-kubectl exec -it <container> /bin/bash
+# Execute command in container
+kubectl exec <pod name> [-c CONTAINER] -- <command>
+
+# Getting shell to container
+kubectl exec -it <pod name> [-c <container>] -- /bin/bash
 
 # Delete
 kubectl delete [pod|rs]
