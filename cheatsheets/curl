@@ -8,11 +8,21 @@ curl -v https://example.com
 # Follow redirects
 curl -L https://example.com
 
-# Show headers only
-curl -I https://example.com
+# Show protocol response headers
+curl -i https://example.com
+curl -I https://example.com     # Headers only
 
-# Post json file
-curl -X POST -H "Content-Type: application/json" -d @<filepath> https://example.com
+# Post form and file (multipart/form-data)
+curl -X POST -F 'name=alice' -F file1=@<filepath> https://example.com
+
+# Post data (application/x-www-form-urlencoded)
+curl -X POST --data-binary @<filepath> https://example.com
+
+# Post data (jpeg file)
+curl -X POST -H 'Content-Type: image/jpeg' --data-binary @<filepath>.jpg https://example.com
+
+# Post contents of json file as data
+curl -X POST -H "Content-Type: application/json" -d @<filepath>.json https://example.com
 
 # Get my global IP address
 curl httpbin.org/ip
