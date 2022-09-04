@@ -22,3 +22,6 @@ pip freeze > requirements.txt
 # Install pakcages from file
 pip install -r requirements.txt
 pip install -r requirements.txt -t <directory>      # Install package into <directory>
+
+# Output one-line list of old packages (for `pip install -u`)
+python -m pip list --outdated --format json | grep -v "\[notice\]" | jq -r ".[].name" | xargs
