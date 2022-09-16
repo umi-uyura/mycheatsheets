@@ -23,6 +23,9 @@ createdb -h <host> -U <user> <database> [description]
 # Quit connection
 \q
 
+# Change encoding
+\encoding <encoding>
+
 # Display list / detail
 # example:
 # - \d+ ... add detail columns
