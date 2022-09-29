@@ -52,8 +52,11 @@ createdb -h <host> -U <user> <database> [description]
 \sv               # view
 \sf               # function
 
-# Copy
-\copy ...
+# CSV export use copy command
+\copy (<table or select> ) to '/tmp/output.csv' with csv delimiter ',';
+
+# CSV import use copy command
+\copy (<table>) from '/tmp/input.csv' with csv;
 
 # Execute sql file
 \i <sql file path>
