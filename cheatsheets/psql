@@ -9,9 +9,11 @@ psql -h <host> -U <user> <database>    # database
 # Execute sql file
 psql -f <sql file path> -h <host> -U <user> -d <database>
 
+# Output query results in CSV format
+psql -h <host> -U <user> -d <database> -c "select ..." -A -F, > output.csv
+
 # Create database
 createdb -h <host> -U <user> <database> [description]
-
 
 #
 # meta command
