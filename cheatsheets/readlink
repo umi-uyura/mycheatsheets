@@ -1,0 +1,7 @@
+---
+tags: [linux]
+---
+
+# Get absolute path / full path to file
+# similer command: realpath
+readlink -f <file>
