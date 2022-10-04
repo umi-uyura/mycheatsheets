@@ -1,5 +1,5 @@
 ---
-tags: [k8s]
+tags: [k8s, infra]
 ---
 
 #
@@ -18,6 +18,9 @@ kubectl logs -f <pod name>            # tail -f
 kubectl logs <pod name> --since=1h    # Last hour
 kubectl logs <pod name> --tail=10     # Latest 10 logs
 kubectl logs <pod name> --timestamps=true   # Add timestamp
+
+# Display resouce usage
+kubectl top <pod name>
 
 #
 kubectl describe [<pod name>]
