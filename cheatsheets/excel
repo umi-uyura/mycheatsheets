@@ -1,0 +1,16 @@
+---
+tags: [office]
+---
+
+#
+# Excel tips
+#
+
+# Datetime string to datetime value
+# * '2022-09-28 01:45:00+00'
+
+=DATE(LEFT(A2,4),MID(A2,6,2),MID(A2,9,2))+TIME(MID(A2,12,2),MID(A2,15,2),MID(A2,18,2))
+
+# UTC to JST / JST to UTC
+=A1+TIME(9,0,0)    # UTC to JST
+=A1-TIME(9,0,0)    # JST to UTC
