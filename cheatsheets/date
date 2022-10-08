@@ -1,15 +1,15 @@
 ---
 tags: [linux, macos]
 ---
-
 #
 # date
 #
 
 # Displays date and time
-date --date='@1530234680'       # In local time zone
-date --date='@1530251482' -u    # In UTC
+date --date='@1530234680'                       # In local time zone
+date --date='@1530251482' -u                    # In UTC
+TZ=Asia/Tokyo date --date='@1530251482'         # In specified time zone
 
 # Format and display date and time
-date --date='@1530251482' "+%Y-%m-%dT%H:%M:%S"    # Linux
-date -r 1530251482 +%Y-%m-%dT%H:%M:%S%z           # Mac
+date --date='@1530251482' "+%Y-%m-%dT%H:%M:%S"  # Linux
+date -r 1530251482 +%Y-%m-%dT%H:%M:%S%z         # Mac
