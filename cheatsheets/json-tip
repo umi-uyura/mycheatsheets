@@ -1,0 +1,13 @@
+---
+tags: [json,tips]
+---
+#
+# JSON tips
+#
+
+# Useful tools
+#
+
+jp              # JSON processor
+jqp             # Intractive jq frontend
+gron            # Make JSON greppable
