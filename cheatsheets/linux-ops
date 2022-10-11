@@ -11,6 +11,8 @@ uptime          # load average
 w               # load average, login user
 top             # load average, cpu usage, memory usage
 vmstat          # statistics including cpu, memory, disk i/o
+sar             # package: sysstat
+dstat           # package: dstat
 
 # Storage
 iostat          # package: sysstat
