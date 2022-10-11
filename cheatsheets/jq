@@ -1,0 +1,15 @@
+---
+tags: [json]
+---
+#
+# jq - lightweight and flexible command-line JSON processor
+#
+# https://stedolan.github.io/jq/
+#
+
+# Examples of simple usage
+# Use {JSON} Placeholder (https://jsonplaceholder.typicode.com)
+curl https://jsonplaceholder.typicode.com/users | jq
+
+# Useful tools
+jqp             # Intractive jq frontend
