@@ -1,0 +1,15 @@
+---
+tags: [database,sql,tips]
+---
+#
+# PostgreSQL Tips
+#
+
+# pg_stat_activity
+#
+
+# Currently running queries and elapsed time
+SELECT pid, query_start, state_change, now() - query_start as elapsed_time, query FROM pg_stat_activity WHERE pid in (select pid from pg_locks) and pid <> pg_backend_pid();
+
+# Queries that are active and have been running for more than 1 minute
+SELECT pid,client_addr, query_start, query FROM pg_stat_activity WHERE state = 'active' AND query_start < ( current_timestamp - interval '1' minute ) AND pid <> pg_backend_pid() ORDER BY query_start;
