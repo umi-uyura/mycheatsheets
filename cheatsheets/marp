@@ -1,0 +1,29 @@
+---
+tags: [presentation]
+---
+#
+# marp
+#
+# https://marp.app/
+#
+
+# Style sample
+#
+---
+marp: true
+theme: gaia
+style: |
+  :root {
+    background-color: white;
+    font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans","BIZ UDPGothic",Meiryo,"sans-serif";
+  }
+  h1 { font-size: 44px }
+  h2 { font-size: 40px }
+  h3 { font-size: 36px }
+  h4 { font-size: 32px }
+  h5 { font-size: 28px }
+  h6 { font-size: 24px }
+  p { font-size: 24px }
+  li { font-size: 24px }
+  th, td { font-size: 20px }
+---
