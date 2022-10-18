@@ -1,0 +1,10 @@
+---
+tags: [linux, network]
+---
+#
+# traceroute
+#
+
+# Use ICMP ECHO
+# * Same behavior as Windows tracert
+traceroute -I <host>
