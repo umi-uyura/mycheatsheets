@@ -20,3 +20,16 @@ iostat          # package: sysstat
 # Network
 ss
 netstat         # package: net-tools
+traceroute      # package: traceroute
+nslookup
+dig
+
+# Show os /  kernel information
+uname -a
+uname -r
+cat /etc/os-release
+cat /etc/lsb-release
+cat /proc/version
+lsb_release -a
+lsb_release -r
+hostnamectl
