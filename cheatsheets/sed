@@ -1,0 +1,12 @@
+---
+tags: [linux]
+---
+#
+# sed - Stream EDitor
+#
+
+see also: 'tag:community'
+
+# Delete lines
+sed '2d'        # Delete 2nd line
+sed '2,5d'      # Delete lines 2 to 5
