@@ -2,11 +2,19 @@
 # magick - ImageMagick
 #
 
-# Convert transparent PNG to non-transparent PNG
-magick convert <target.png>  \( +clone -alpha opaque -fill white -colorize 100% \) +swap -geometry +0+0 -compose Over -composite -alpha off <output.png>
+# Display image information
+magick identify <image>
+magick identify -verbose <image>
+
+# Display formatted image information
+# - Format: https://imagemagick.org/script/escape.php
+magick identify -format "%m - %w x %h (%b)" <image>
 
 # Cut out the specified page from PDF
 magick convert <target.pdf>[<page>] <output.pdf>
+
+# Convert transparent PNG to non-transparent PNG
+magick convert <target.png>  \( +clone -alpha opaque -fill white -colorize 100% \) +swap -geometry +0+0 -compose Over -composite -alpha off <output.png>
 
 # Batch conversion of PDF files to JPG format
 magick mogrify -format jpg *.pdf
