@@ -7,6 +7,16 @@ tags: [linux]
 
 see also: 'tag:community'
 
+# Replace
+#
+
+# Replace new line (need -z option)
+sed -z `s/\n/,/g`
+
 # Delete lines
 sed '2d'        # Delete 2nd line
 sed '2,5d'      # Delete lines 2 to 5
+
+# Insert text
+sed `1i <text>` # Insert <text> on first line
+sed `$a <text>` # Append <text> after last line
