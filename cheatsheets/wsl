@@ -22,3 +22,19 @@ wsl -e <command> [-d <distro> -u <user>]
 
 # Export wsl image (.tar)
 wsl --export <distro> <outputpath>
+
+
+# Location of virtual machine hard disk image
+%LOCALAPPDATA%\Packages\<package name>\LocalState\ext4.vhdx
+
+# Get <package name>
+powershell -Command "Get-AppxPackage -Name "*Ubuntu*" | Select PackageFamilyName"
+
+# Reduce size of wsl virtual disk
+wsl --shutdown
+net stop LxssManager    # Need administrator privileges
+diskpart
+DISKPART> select vdisk file="<path to vhdx>"
+DISKPART> compact vdisk
+DISKPART> exit
+net start LxssManager   # Need administrator privileges
