@@ -1,0 +1,32 @@
+---
+tags: [windows,tips]
+---
+#
+# Batch file Tips
+#
+
+%0              Full path of batch file
+%1, %2, %3 ...  Order of arguments passed to batch files
+%~dp0           Get directory where batch file is located
+
+# Show name of the directory where batch file is located
+SET DIRECTORY_PATH=%~dp0
+FOR %%A IN ("%DIRECTORY_PATH:~0,-1%") DO ECHO %%~nxA
+
+# Temporarily move to directory where batch file is located
+PUSHD %~dp0
+<batch operation>
+POPD
+
+# Error handling
+IF %ERRORLEVEL% EQU 0 (
+  <normal operation>
+) ELSE (
+  <error handling>
+)
+
+# Process file contents line by line
+FOR /f "tokens=*" %%A IN (<file>) DO ECHO %%A
+
+# Processes results of command execution
+FOR /f "usebackq delims=" %%A IN (`<command>`) DO ECHO %%A
