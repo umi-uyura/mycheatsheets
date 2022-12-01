@@ -55,10 +55,21 @@ createdb -h <host> -U <user> <database> [description]
 \sf               # function
 
 # CSV export use copy command
-\copy (<table or select> ) to '/tmp/output.csv' with csv delimiter ',';
+# - Output destination must be absolute path
+\copy <table> to '/tmp/output.csv' with csv delimiter ',';
+... with csv delimiter ',' header;          # with header
+... with csv delimiter ',' force quote *;   # enclose in double quotation
+... with csv delimiter ',' null as '';      # convert null(\n) to ''
+... with csv delimiter E'\t';               # tsv
+
+# Export specific columns
+\copy <table>(<column1>,<column2>,<column3>) to ...
+
+# Export query results
+\copy (<query>) to ...
 
 # CSV import use copy command
-\copy (<table>) from '/tmp/input.csv' with csv;
+\copy <table> from '/tmp/input.csv' with csv;
 
 # Execute sql file
 \i <sql file path>
