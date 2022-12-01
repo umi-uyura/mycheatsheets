@@ -20,3 +20,10 @@ sed '2,5d'      # Delete lines 2 to 5
 # Insert text
 sed `1i <text>` # Insert <text> on first line
 sed `$a <text>` # Append <text> after last line
+
+# Transform
+# 
+
+# Unquoted csv to enclosed in double quotes
+# Note: Commas in fields are not taken into account
+sed -e 's/\(^\|$\)/"/g' -e 's/,/","/g'
