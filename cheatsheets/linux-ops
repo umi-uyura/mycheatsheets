@@ -18,11 +18,11 @@ dstat           # package: dstat
 iostat          # package: sysstat
 
 # Network
-ss
-netstat         # package: net-tools
-traceroute      # package: traceroute
-nslookup
-dig
+ss              # investigate sockets
+netstat         # investigate sockets, package: net-tools
+traceroute      # package trace, package: traceroute
+nslookup        # query DNS
+dig             # DNS lookup
 
 # Show os /  kernel information
 uname -a
