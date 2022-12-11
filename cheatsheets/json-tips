@@ -8,6 +8,6 @@ tags: [json,tips]
 # Useful tools
 #
 
-jp              # JSON processor
+jq              # JSON processor
 jqp             # Intractive jq frontend
 gron            # Make JSON greppable
