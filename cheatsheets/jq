@@ -11,5 +11,8 @@ tags: [json]
 # Use {JSON} Placeholder (https://jsonplaceholder.typicode.com)
 curl https://jsonplaceholder.typicode.com/users | jq
 
+# Verify that correct json format
+jq type <json file>
+
 # Useful tools
 jqp             # Intractive jq frontend
