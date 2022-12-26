@@ -5,11 +5,15 @@ tags: [linux, macos]
 # date
 #
 
-# Displays date and time
+# Displays date and time from unixtime
 date --date='@1530234680'                       # In local time zone
 date --date='@1530251482' -u                    # In UTC
 TZ=Asia/Tokyo date --date='@1530251482'         # In specified time zone
 
-# Format and display date and time
+# Format and display date and time from unixtime
 date --date='@1530251482' "+%Y-%m-%dT%H:%M:%S"  # Linux
-date -r 1530251482 +%Y-%m-%dT%H:%M:%S%z         # Mac
+date -r 1530251482 +%Y-%m-%dT%H:%M:%S%z         # macOS
+
+# Displays week of day from specific date
+date "+%Y/%m/%d(%a)" -d "2022/12/31"
+LANG=ja_JP.UTF-8 date "+%Y/%m/%d(%a)" -d "2022/12/31"   # In specified locale
