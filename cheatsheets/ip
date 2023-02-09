@@ -1,0 +1,20 @@
+---
+tags: [linux]
+---
+
+#
+# ip
+#
+
+# Show IP address
+ip a
+ip address
+ip -4 a                 # only IPv4
+
+# Show default gateway (all routes)
+# - After 'default' is default gateway
+ip r
+ip route
+
+# Show packet routing to <ip address>
+ip route get <ip address>
