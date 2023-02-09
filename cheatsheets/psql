@@ -78,3 +78,6 @@ createdb -h <host> -U <user> <database> [description]
 1. \o <filename>   # switching output to file
 2. <query>         # output query result to file
 3. \o              # switching output to console
+
+# Toggle expanded display
+\x 
