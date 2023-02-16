@@ -1,0 +1,15 @@
+---
+tags: [linux,network]
+---
+#
+# ss - another utility to investigate sockets
+#
+
+# Display only IPv4 listening port
+# -t ... tcp
+# -u ... udp
+ss -ltu4
+ss -lntu4               # Don't resolve service names
+
+# Display socket usage summary
+ss -s
