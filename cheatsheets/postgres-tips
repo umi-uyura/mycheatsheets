@@ -5,6 +5,7 @@ tags: [database,sql,tips]
 # PostgreSQL Tips
 #
 
+#
 # pg_stat_activity
 #
 
@@ -14,6 +15,19 @@ SELECT pid, query_start, state_change, now() - query_start as elapsed_time, quer
 # Queries that are active and have been running for more than 1 minute
 SELECT pid,client_addr, query_start, query FROM pg_stat_activity WHERE state = 'active' AND query_start < ( current_timestamp - interval '1' minute ) AND pid <> pg_backend_pid() ORDER BY query_start;
 
+
+#
+# size
+#
+
+# Display database size
+SELECT datname, pg_size_pretty(pg_database_size(datname)) FROM pg_database;
+
+# Display table size and record size
+SELECT relname, relkind, pg_size_pretty(relpages::bigint * 8192) as table_size, reltuples::bigint as record_size FROM pg_class WHERE relname NOT LIKE 'pg_%' AND relname NOT LIKE 'sql_%' AND relkind = 'r';
+
+
+#
 # Data processing
 #
 
