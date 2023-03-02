@@ -1,0 +1,15 @@
+---
+tags: [windows]
+---
+
+#
+# Hyper-V tips
+#
+
+# CLI operation
+# - Need administrator privileges
+# - If running from the command prompt, use `powershell -Command "<command>"`
+
+Get-VM
+Start-VM <vm name>
+Stop-VM <vm name>
