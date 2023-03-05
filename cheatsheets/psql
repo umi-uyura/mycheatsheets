@@ -69,7 +69,11 @@ createdb -h <host> -U <user> <database> [description]
 \copy (<query>) to ...
 
 # CSV import use copy command
-\copy <table> from '/tmp/input.csv' with csv;
+\copy <table> from '/tmp/input.csv' with csv delimiter ',';
+... with csv delimiter ',' header;          # with header
+
+# Import specific columns
+\copy <table>(<column1>,<column2>,<clumn3>,...) from ...
 
 # Execute sql file
 \i <sql file path>
