@@ -33,3 +33,6 @@ SELECT relname, relkind, pg_size_pretty(relpages::bigint * 8192) as table_size, 
 
 # Convert output results of SELECT clause to CSV
 cat <results file> | sed '2d' | sed -e 's/^ */"/g' -e 's/ *$/"/g' -e 's/ *| */","/g'
+
+# Convert output results of SELECT clause to CSV include JSON column
+cat <results file> | sed '2d' | sed -e 's/^ */"/g' -e 's/ *$/"/g' -e 's/ *| */","/g' -e 's/"{/{/g' -e 's/}"/}/g'
