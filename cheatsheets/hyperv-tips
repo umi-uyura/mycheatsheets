@@ -13,3 +13,15 @@ tags: [windows]
 Get-VM
 Start-VM <vm name>
 Stop-VM <vm name>
+
+#
+# Nat
+#
+
+Get-NetNat
+New-NetNat -Name <nat name> -InternalIPInterfaceAddressPrefix <ip range>
+Remove-NetNat -Name <nat name>
+
+# Create NAT network
+# - ifIndex ... Obtain by `Get-NetAdapter` command
+New-NetIPAddress -IPAddress <ip address> -PrefixLength <netmask> -InterfaceIndex <ifIndex>
