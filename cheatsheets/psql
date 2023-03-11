@@ -85,3 +85,6 @@ createdb -h <host> -U <user> <database> [description]
 
 # Toggle expanded display
 \x 
+
+# Execute shell command
+\! <command>
