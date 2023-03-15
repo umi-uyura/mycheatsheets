@@ -1,0 +1,34 @@
+---
+tags: [linux,opts,tips]
+---
+#
+# nfs (network file system) tips
+#
+
+# NFS server
+#
+# /etc/exports example
+#   <path/to/share>    xxx.xxx.xxx.xxx/xx(<option>)
+#   * option example: rw,sync,no_subtree_check,no_root_squash
+#
+sudo apt install nfs-kernel-server
+sudo mkdir -p <path/to/share>                   # Create share directory
+sudo vi /etc/exports
+sudo exportfs -v                                # Check setting
+sudo exportfs -ra                               # Export share directory
+sudo showmount -e                               # Check that directory is exported
+
+
+# NFS client
+#
+# /etc/fstab example
+#   <nfs server>:<share folder>   <mount point>   nfs     defaults,intr,nofail,soft,timeo=150,retrans=2,retry=2 0 0
+#
+sudo apt install nfs-common
+sudo mkdir -p <path/to/mount>                   # Create mount folder
+sudo vi /etc/fstab
+sudo mount <path/to/mount>
+nfsstat -m                                      # Display mounted NFS filesystem
+
+sudo mount -t nfs <nfs server>:<path/to/share>  <path/to/mount>         # Manual mount
+mount -v <path/to/mount>                        # Debug
