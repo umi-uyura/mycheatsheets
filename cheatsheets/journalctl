@@ -1,0 +1,33 @@
+---
+tags: [linux,log,ops]
+---
+#
+# journalctl
+#
+
+# Add message explanations where available
+journalctl -x
+
+# Follow the journal
+journalctl -f
+
+# Display details if available
+journalctl -e
+
+# Display for specified number of lines
+journalctl -n <lines>
+
+# Display for specified service unit
+journalctl -u <service unit>
+
+# Display for specified executable
+journalctl <path/to/executable>
+
+# Display journals mathcing <pattern>
+journalctl -g <pattern>
+
+# Display journals specified date range
+journalctl --since=<YYYY-mm-dd[ HH:MM:DD]> --until=<YYYY-mm-dd[ HH:MM:DD]>
+
+# List boot information
+journalctl --list-boots
