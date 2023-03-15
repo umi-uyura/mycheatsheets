@@ -17,3 +17,6 @@ date -r 1530251482 +%Y-%m-%dT%H:%M:%S%z         # macOS
 # Displays week of day from specific date
 date "+%Y/%m/%d(%a)" -d "2022/12/31"
 LANG=ja_JP.UTF-8 date "+%Y/%m/%d(%a)" -d "2022/12/31"   # In specified locale
+
+# Display current date and time as unixtime
+date +$s
