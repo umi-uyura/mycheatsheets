@@ -15,6 +15,8 @@ screen -r <session>
 ## Shortcut
 #
 
+Ctrl + a, ?             # Show help
+Ctrl + a, :             # Command mode
 Ctrl + a, d             # Detach window
 Ctrl + a, n/p           # Move next/prev window
 Ctrl + a, a             # Switch window
@@ -22,3 +24,8 @@ Ctrl + a, A             # Set window title
 Ctrl + a, "             # Show window list
 Ctrl + a, c             # Create new window
 Ctrl + a, K             # Close window
+
+# Split window
+Ctrl + a, S             # Split horizontal
+Ctrl + a, |             # Split vertical
+Ctrl + a, tab           # Move next region
