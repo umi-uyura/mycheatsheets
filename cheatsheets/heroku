@@ -1,0 +1,20 @@
+#
+# Heroku CLI
+#
+
+# Add ssh key
+# 
+# ~/.ssh/config --------------------
+#   Host heroku.com
+#     HostName heroku.com
+#     IdentityFile ~/.ssh/<ssh key>
+#     IdentitiesOnly yes
+# ----------------------------------
+#
+heroku keys:add ~/.ssh/<key>.pub
+
+# Clone heroku repository
+heroku git:clone -a <app name>
+
+# Add git remote
+heroku git:remote -a <app name>
