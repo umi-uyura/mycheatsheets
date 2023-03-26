@@ -6,6 +6,23 @@ tags: [database,sql,tips]
 #
 
 #
+# Configuration
+#
+
+# Reload configuration (postgresql.conf, pg_hba.conf) without restart server
+SELECT pg_reload_conf();
+
+# Query postgresql.conf settings for current session
+SELECT * FROM pg_settings;
+
+# Query pg_hba.conf settings for current session
+SELECT * FROM pg_hba_file_rules;
+
+# Query about settings loaded from file
+SELECT * FROM pg_file_settings;
+
+
+#
 # pg_stat_activity
 #
 
@@ -17,6 +34,15 @@ SELECT pid,client_addr, query_start, query FROM pg_stat_activity WHERE state = '
 
 
 #
+# Replication
+#
+
+# Display replication status
+# * Easy to see with expand display (\x) enabled.
+SELECT * FROM pg_stat_replication;
+
+
+#
 # size
 #
 
@@ -25,15 +51,6 @@ SELECT datname, pg_size_pretty(pg_database_size(datname)) FROM pg_database;
 
 # Table size and record size
 SELECT relname, relkind, pg_size_pretty(relpages::bigint * 8192) as table_size, reltuples::bigint as record_size FROM pg_class WHERE relname NOT LIKE 'pg_%' AND relname NOT LIKE 'sql_%' AND relkind = 'r';
-
-
-#
-# Replication
-#
-
-# Display replication status
-# * Easy to see with expand display (\x) enabled.
-SELECT * FROM pg_stat_replication;
 
 
 #
