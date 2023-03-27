@@ -40,7 +40,7 @@ createdb -h <host> -U <user> <database> [description]
 \dt               # tables
 \dv               # views
 \ds               # sequences
-\dp               # access rights for tables, views, sequences
+\dp (\z)          # access rights for tables, views, sequences
 \df               # functions
 \df[antw]         #   a ... aggregate
                   #   n ... normal(?)
