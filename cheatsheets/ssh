@@ -14,3 +14,6 @@ ssh <ssh server user>@<ssh server> -R <local port for ssh server>:<local host to
 #   <other>  <local> -]-> <ssh server>
 #      ^-----(local)<-]--------|
 ssh <ssh server user>@<ssh server> -R <local port for ssh server>:<other host>:<other host port>
+
+# Ignore know hosts
+ssh StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null <ssh server>
