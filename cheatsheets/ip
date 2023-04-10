@@ -7,14 +7,22 @@ tags: [linux]
 #
 
 # Show IP address
-ip a
-ip address
+ip a (or address)
 ip -4 a                 # only IPv4
+ip -br a                # brief
+
+# Show network interface
+ip l (or link)
+ip -br l                # brief
 
 # Show default gateway (all routes)
 # - After 'default' is default gateway
-ip r
-ip route
+ip r (or route)
 
 # Show packet routing to <ip address>
 ip route get <ip address>
+
+# Show arp table
+ip nei (or neigh / neighbour)
+ip -4 nei               # only IPv4
+ip -br nei              # brief
