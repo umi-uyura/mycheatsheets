@@ -24,13 +24,16 @@ wsl -e <command> [-d <distro> -u <user>]
 wsl --export <distro> <outputpath>
 
 
-# Location of virtual machine hard disk image
-%LOCALAPPDATA%\Packages\<package name>\LocalState\ext4.vhdx
+# Get <package family name>
+# - Location of virtual machine hard disk image
+#   %LOCALAPPDATA%\Packages\<package family name>\LocalState\ext4.vhdx
+Get-AppxPackage -Name "*Distro Name*" | Select PackageFamilyName
 
-# Get <package name>
-powershell -Command "Get-AppxPackage -Name "*Ubuntu*" | Select PackageFamilyName"
+# Reduce size of wsl virtual disk (for Pro/Enterprise Edition)
+wsl --shutdown
+optimize-vhd -Path <path to vhdx> -Mode full
 
-# Reduce size of wsl virtual disk
+# Reduce size of wsl virtual disk (for Home Edition)
 wsl --shutdown
 net stop LxssManager    # Need administrator privileges
 diskpart
