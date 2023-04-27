@@ -41,3 +41,13 @@ DISKPART> select vdisk file="<path to vhdx>"
 DISKPART> compact vdisk
 DISKPART> exit
 net start LxssManager   # Need administrator privileges
+
+# Enable network forwarding between WSL and Hyper-V
+# - Check network status
+#   Get-NetIPInterface | `
+#       Select-Object ifIndex,InterfaceAlias,AddressFamily,ConnectionState,Forwarding | `
+#       Sort-Object -Property IfIndex | `
+#       Format-Table
+Get-NetIPInterface | `
+    Where-Object {$_.InterfaceAlias -eq 'vEthernet (WSL)' -or $_.InterfaceAlias -eq 'vEthernet (Default Switch)'} | `
+    Set-NetIPInterface -Forwarding Enabled
