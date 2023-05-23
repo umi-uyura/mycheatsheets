@@ -1,0 +1,61 @@
+---
+tags: [linux]
+---
+
+#
+# tmux - Terminal Multiplexer
+#
+
+# Session
+
+tmux                            # Start new session
+tmux new -s <name>              # Start new named session
+tmux ls                         # List sessions
+tmux attach                     # Attach latest session
+tmux attach -t name             # Attach session by name
+tmux kill-session -t name       # Kill session by name
+tmux source <tmux conf>         # Load config file
+
+Ctrl-b d                        # Detach current session
+Ctrl-b s                        # List sessions
+Ctrl-b $                        # Rename session
+
+# Window
+
+Ctrl-b c                        # Create new window
+Ctrl-b [0-9]                    # Move number window
+Ctrl-b n                        # Move next window
+Ctrl-b p                        # Move previous window
+Ctrl-b w                        # List windows
+Ctrl-b ,                        # Rename window name
+Ctrl-b '                        # Move window by number
+Ctrl-b f                        # Find window by name
+
+# Pane
+
+Ctrl-b %                        # Split pane horizontally
+Ctrl-b "                        # Split pane vertically
+Ctrl-b [arrow key]              # Move pane
+Ctrl-b o                        # Move next pane
+Ctrl-b ;                        # Move previous pane
+Ctrl-b q                        # Show pane number
+Ctrl-b z                        # Maximize/restore pane
+Ctrl-b SPACE                    # Change layout
+Ctrl-b t                        # Show clock
+Ctrl-b !                        # Change pane to window
+
+# Copy mode (Emacs keybind)
+
+Ctrl-b [                        # Start copy mode
+q                               # Exit copy mode
+Ctrl-f, Ctrl+b, Ctrl+n, Ctrl+p  # Move cursor
+Ctrl-SPACE                      # Start select
+Ctrl-w                          # End select (Copy clipboard)
+Ctrl-b ]                        # Paste
+Ctrl-s                          # Search forward
+Ctrl-r                          # Search backward
+
+# Others
+
+Ctrl-b ?                        # Help
+Ctrl-b :                        # Command mode
