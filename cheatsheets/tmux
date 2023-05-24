@@ -10,11 +10,11 @@ tags: [linux]
 
 tmux                            # Start new session
 tmux new -s <name>              # Start new named session
+tmux -f <path/to/.tmux.conf>    # Start new session with config
 tmux ls                         # List sessions
 tmux attach                     # Attach latest session
 tmux attach -t name             # Attach session by name
 tmux kill-session -t name       # Kill session by name
-tmux source <tmux conf>         # Load config file
 
 Ctrl-b d                        # Detach current session
 Ctrl-b s                        # List sessions
