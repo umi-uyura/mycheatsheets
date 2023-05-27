@@ -9,5 +9,8 @@ go install <package url>@latest
 # Install or Update specific package
 go get -u <module>
 
-# Update all package
+# Update all packages
 go get -u
+
+# Display outdated packages
+go list -m -u all
