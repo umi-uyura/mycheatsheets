@@ -38,6 +38,8 @@ lsb_release -r
 hostnamectl
 
 # Show hardware information
-lscpu           # CPU
-lshw            # Hardware
-lsblk           # Brock devices
+lscpu                   # CPU
+cat /proc/cpuinfo       # CPU
+cat /proc/meminfo       # Memory
+lshw                    # Hardware
+lsblk                   # Brock devices
