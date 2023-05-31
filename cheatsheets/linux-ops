@@ -39,7 +39,7 @@ hostnamectl
 
 # Show hardware information
 lscpu                   # CPU
-cat /proc/cpuinfo       # CPU
-cat /proc/meminfo       # Memory
+cat /proc/cpuinfo       # CPU -> `lscpu`
+cat /proc/meminfo       # Memory -> `free`
 lshw                    # Hardware
 lsblk                   # Brock devices
