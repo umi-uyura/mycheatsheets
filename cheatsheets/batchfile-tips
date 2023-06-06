@@ -9,6 +9,14 @@ tags: [windows,tips]
 %1, %2, %3 ...  Order of arguments passed to batch files
 %~dp0           Get directory where batch file is located
 
+# Comparison operator
+equ - Equal
+neq - Not equal (Treat as value, use '==' for string)
+lss - Less than
+leq - Less than or equal
+gtr - Greater than
+geq - Greater than or equal
+
 # Show name of the directory where batch file is located
 SET DIRECTORY_PATH=%~dp0
 FOR %%A IN ("%DIRECTORY_PATH:~0,-1%") DO ECHO %%~nxA
