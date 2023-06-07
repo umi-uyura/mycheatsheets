@@ -22,6 +22,9 @@ source <venv>/bin/activate      # Linux/macOS
 # Exit venv
 (.venv) deactive
 
+# Install language-server (https://github.com/python-lsp/python-lsp-server)
+python -m pip install 'python-lsp-server[all]'
+
 # Basic example of server with python
 # Will start a Web Server in the current directory on port 8000
 python -m http.server 8000      # Python 3
