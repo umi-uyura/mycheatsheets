@@ -23,7 +23,9 @@ source <venv>/bin/activate      # Linux/macOS
 (.venv) deactive
 
 # Install language-server (https://github.com/python-lsp/python-lsp-server)
+# - Emacs: `M-x add-dir-local-variable` and set path to `lsp-pylsp-server-command`
 python -m pip install 'python-lsp-server[all]'
+
 
 # Basic example of server with python
 # Will start a Web Server in the current directory on port 8000
