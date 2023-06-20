@@ -1,5 +1,5 @@
 ---
-tags: [windows, tips]
+tags: [windows, tips, network]
 ---
 
 #
@@ -8,3 +8,48 @@ tags: [windows, tips]
 
 # Get system configutation
 systeminfo
+
+
+#
+# Network
+#
+
+# Get network adapter information
+Get-NetAdapter
+
+# IP address
+# - ifIndex ... Obtain by `Get-NetAdapter` command
+New-NetIPAddress [-InterfaceAlias "<Interface Name>" | -InterfaceIndex <ifIndex>]
+                 -IPAddress <ip address>
+                 -PrefixLength <netmask>
+                 [-DefaultGateway <gw ip address>]
+Remove-NetIPAddress [-InterfaceAlias "<Interface Name>" | -InterfaceIndex <ifIndex>]
+                    -IPAddress <ip address>
+                    [-DefaultGateway <gw ip address>]
+
+# NAT
+Get-NetNat
+New-NetNat -Name <nat name> -InternalIPInterfaceAddressPrefix <ip range>
+Remove-NetNat -Name <nat name>
+
+# Virtual Switch
+Get-VMSwitch
+New-VMSwitch -SwitchName "<switch name>"                          # External Virtual Switch
+             -NetAdapterName "<adapter name>"
+             [-AllowManagementOS $true]         # Network sharing for Hyper-V host
+New-VMSwitch -SwitchName "<switch name>" -SwitchType Internal     # Internal Virtual Switch
+New-VMSwitch -SwitchName "<switch name>" -SwitchType Private      # Private Virtual Switch
+
+# Router
+Get-NetRoute
+New-NetRoute -DestinationPrefix <destination network range>
+             -NextHop <router ip address>
+             [-InterfaceIndex <ifIndex>]
+New-NetRoute -DestinationPrefix "0.0.0.0/0" ...      # Default Gateway
+
+# ARP table
+Get-NetNeighbor [-IPAddress <ip address>]
+                [-InterfaceIndex ifIndex]
+                [-State <state>]                        # Delay, Incomplete, Permanent, Probe, Reachable, State
+                [-LinkLayerAddress <MAC address>]
+                [-AddressFamily <protocol>]             # ipv4, ipv6
