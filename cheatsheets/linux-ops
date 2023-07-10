@@ -24,6 +24,7 @@ iostat          # package: sysstat
 ss              # investigate sockets
 netstat         # investigate sockets, package: net-tools
 traceroute      # package trace, package: traceroute
+nc              # Send/listens TCP and UDP
 nslookup        # query DNS
 dig             # DNS lookup
 
