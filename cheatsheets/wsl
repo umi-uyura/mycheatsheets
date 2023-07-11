@@ -24,10 +24,14 @@ wsl -e <command> [-d <distro> -u <user>]
 wsl --export <distro> <outputpath>
 
 
+
 # Get <package family name>
 # - Location of virtual machine hard disk image
 #   %LOCALAPPDATA%\Packages\<package family name>\LocalState\ext4.vhdx
 Get-AppxPackage -Name "*Distro Name*" | Select PackageFamilyName
+
+# Check available disk space in VHD
+wsl --system -d <distribution-name> df -h /mnt/wslg/distro
 
 # Reduce size of wsl virtual disk (for Pro/Enterprise Edition)
 wsl --shutdown
