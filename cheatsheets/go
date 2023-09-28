@@ -2,15 +2,19 @@
 # go
 #
 
-# Install package
-go install <package url>@<version>
-go install <package url>@latest
+# Install module
+go install <module url>@latest         # Latest version
+go install <module url>@<version>      # Specific version
 
-# Install or Update specific package
-go get -u <module>
+# Install or Update specific module
+go get <module>              # Install module
+go get -u <module>           # Update module
 
-# Update all packages
+# Display outdated modules
+go list -m -u all
+
+# Update all modules
 go get -u
 
-# Display outdated packages
-go list -m -u all
+# Organize go.mod
+go mod tidy
