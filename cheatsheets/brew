@@ -23,6 +23,10 @@ brew outdated
 brew upgrade
 brew upgrade <package>
 
+# Tap (Third-Party Repositories)
+brew tap <user/repo>
+brew untap <user/repo>
+
 
 #
 # Homebrwe cask support (macOS only)
