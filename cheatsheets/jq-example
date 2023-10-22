@@ -1,0 +1,63 @@
+---
+tags: [json,jq,tips]
+---
+#
+# jq example
+#
+
+# Example json
+#
+# [
+#   {
+#     "id": 1,
+#     "timestamp": 1672412400,
+#     "name": {
+#       "firstname": "Taro",
+#       "lastname": "Yamada"
+#     }
+#   },
+#   {
+#     "id": 2,
+#     "timestamp": 1672498800,
+#     "name": {
+#       "firstname": "Hanako",
+#       "lastname": "Honda"
+#     }
+#   },
+#   ...
+# ]
+
+$ jq '.[0]'
+{
+  "id": 1,
+  "timestamp": 1672412400,
+  "name": {
+    "firstname": "Taro",
+    "lastname": "Yamada"
+  }
+}
+
+$ jq '.[].timestamp'
+1672412400
+1672498800
+
+$ jq -r '.[] | {first: .name.firstname, last: .name.lastname}'
+{
+  "first": "Taro",
+  "last": "Yamada"
+},
+{
+  "first": "Hanako",
+  "last": "Honda"
+}
+
+$ jq '.[] | .name.firstname + " " + .name.lastname'
+"Taro Yamada"
+"Hanako Honda"
+
+$ jq -r '.[] | .name.firstname + " " + .name.lastname'
+Taro Yamada
+Hanako Honda
+
+$ jq '. | length'
+2
