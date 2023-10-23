@@ -10,3 +10,22 @@ git config --show-scope -l              # List with scope
 git config --show-scope <attribute>
 git config --show-origin -l             # List with config file
 git config --show-origin <attribute>
+
+
+# Worktree
+
+git worktree list
+
+git worktree add <worktree path> [<branch>]
+git worktree add -b <new branch> <worktree path> [<remote>/<branch>]
+
+git worktree move <worktree path> <new path>
+
+git worktree remove <worktree path>
+git worktree prune [--dry-run]
+
+git worktree repair
+
+git worktree lock
+git worktree unlock
+
