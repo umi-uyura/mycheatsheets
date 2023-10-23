@@ -6,6 +6,13 @@ tags: [json]
 #
 # https://stedolan.github.io/jq/
 #
+# See: jq-example
+#
+
+#
+# Useful tools
+#
+jqp             # Intractive jq frontend
 
 # Examples of simple usage
 jq '.' sample.json
@@ -18,16 +25,14 @@ curl https://jsonplaceholder.typicode.com/users | jq
 # Verify that correct json format
 jq type <json file>
 
-# Specific json file
-
-# Useful tools
-jqp             # Intractive jq frontend
-
-# Count string/array/object(key-value pair)
-cat sample.json | jq '.data | length'
-
 # Input options
 jq -s           # Read continuous json (JSON Lines)
 
 # Output options
 jq -r           # Remove double quotes
+
+# Count string/array/object(key-value pair)
+cat sample.json | jq '.data | length'
+
+# Convert number to string
+jq '(.number|tostring)'

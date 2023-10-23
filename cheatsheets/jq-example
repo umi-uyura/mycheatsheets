@@ -59,5 +59,16 @@ $ jq -r '.[] | .name.firstname + " " + .name.lastname'
 Taro Yamada
 Hanako Honda
 
+# Count string/array/object(key-value pair)
 $ jq '. | length'
 2
+
+
+#
+# Convert
+#
+
+# Convert number to string
+$ jq '.[].timestamp|tostring'
+"1672412400"
+"1672498800"
