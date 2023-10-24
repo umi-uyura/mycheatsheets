@@ -2,15 +2,21 @@
 # curl
 #
 
-# Outputs detail trace
+# Outputs detail trace (include request headers)
 curl -v https://example.com
 
 # Follow redirects
 curl -L https://example.com
 
 # Show protocol response headers
-curl -i https://example.com
+curl -i https://example.com     # Headers and body
 curl -I https://example.com     # Headers only
+
+# GET request and output header information only
+curl -IXGET https://example.com
+
+# Output response to file
+curl https://example.com -o example.html
 
 # Post form and file (multipart/form-data)
 curl -X POST -F 'name=alice' -F file1=@<filepath> https://example.com
