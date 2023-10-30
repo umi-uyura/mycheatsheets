@@ -27,6 +27,9 @@ brew upgrade <package>
 brew tap <user/repo>
 brew untap <user/repo>
 
+# Bundler
+brew bundle --file=<Brewfile path>
+brew bundle dump
 
 #
 # Homebrwe cask support (macOS only)
