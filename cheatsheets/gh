@@ -1,0 +1,16 @@
+---
+tags: [git]
+---
+#
+# gh - GitHub CLI
+#
+
+# Create pull request
+# - Only one of body and template can be specified
+gh pr create --base <to> [--head <from>] --title <title>
+             --body <body> --template <template name> --assignee "@me"
+gh pr create -B <to> [-H <from>] -t <title> -B <body> -T <template name> -a "@me"
+
+# Checkout pull request branch
+gh pr checkout <pr number>
+gh co <pr number>               # alias
