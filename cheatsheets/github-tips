@@ -32,3 +32,36 @@ git checkout <feature-branch>
 git push origin <feature-branch>
 
 # 6. Make a pull request in GitHub
+
+
+#
+# Filter keywords
+#
+
+is:pr
+is:issue
+is:open
+is:closed
+is:merged
+is:unmerged
+author:<user>
+assignee:<user>
+commenter:<user>
+involves:<user>         # author || assignee || mentions || commenter
+created:>=YYYY-MM-DD
+updated:=YYYY-MM-DD
+closed:<=YYYY-MM-DD
+merged:=YYYY-MM-DD
+in:title
+in:body
+in:comments
+label:<label1> label:<label2>           # label1 && label2
+label:<label1>,<label2>                 # label1 || label2
+
+
+#
+# Sort keywords
+#
+sort:author-date[-desc|-asc]
+sort:committer-date[-desc|-asc]
+sort:updated[-desc|-asc]
