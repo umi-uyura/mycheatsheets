@@ -1,0 +1,18 @@
+---
+tags: [python,scraping]
+---
+#
+# Scrapy
+#
+
+# Create project
+# ```shell
+# $ cd <project name>
+# ```
+scrapy startproject <project name>
+
+# 
+scrapy shell <scrape url>
+scrapy genspider <spider name> <domain>
+scrapy list
+scrapy crawl <spider name>
