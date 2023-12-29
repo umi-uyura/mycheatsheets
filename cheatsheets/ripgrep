@@ -1,0 +1,7 @@
+#
+# rg (ripgrep)
+#
+
+# Find file
+rg --files "*.html"
+rg --files -i index.html
