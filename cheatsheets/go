@@ -2,9 +2,15 @@
 # go
 #
 
-# Install module
+# Install module to $GOPATH/bin
 go install <module url>@latest         # Latest version
 go install <module url>@<version>      # Specific version
+
+# Uninstall module from $GOPATH/bin
+rm $(go env GOPATH)/bin/<binary>
+
+# Uninstall module source cache
+[sudo] rm -rf $(go env GOMODCACHE)/<domain>/<user>/<package>@v*
 
 # Install or Update specific module
 go get <module>              # Install module
