@@ -12,17 +12,28 @@ wsl --list
 wsl --list [--running] [--verbose]
 wsl -l [-v]
 
-wsl --terminate <distro>
-wsl -t <distro>
-
 wsl --unregister <distro>
 
 wsl --exec <command> [--distribution <distro> --user <user>]
 wsl -e <command> [-d <distro> -u <user>]
 
+# Terminate wsl distribution
+wsl --terminate <distro>
+wsl -t <distro>
+
+# Terminate wsl
+wsl --shutdown
+taskkill /f /im wslservice.exe
+taskkill /f /im wslhost.exe
+taskkill /f /im wsl.exe
+
+net stop lxssmanager
+sc queryex lxssmanager  # Get PID
+wmic process where ProcessID=<pid> delete
+net start lxssmanager
+
 # Export wsl image (.tar)
 wsl --export <distro> <outputpath>
-
 
 
 # Get <package family name>
