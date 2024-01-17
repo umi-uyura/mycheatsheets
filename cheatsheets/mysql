@@ -1,0 +1,34 @@
+---
+tags: [database]
+---
+#
+# mysql - MySQL command line tool
+#
+
+# Connect
+mysql -h <host> -P <port> -u <user> -p
+
+# Export database
+mysqldump -h <host> -P <port> -u <user> -p -x <database> > <output file>
+
+# Restore database
+mysql -h <host> -P <port> -u <user> -p <database> < <input file>
+
+
+#
+# meta command
+#
+
+# List databases
+show databases;
+
+# Select database
+use <database>;
+
+# List tables
+show tables;
+show tables status;     # more detail
+
+# Show table detail
+desc <table>;
+show full columns from <table>;    # more detail
