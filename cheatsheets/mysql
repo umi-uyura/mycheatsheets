@@ -9,7 +9,12 @@ tags: [database]
 mysql -h <host> -P <port> -u <user> -p
 
 # Export database
-mysqldump -h <host> -P <port> -u <user> -p -x <database> > <output file>
+mysqldump -h <host> -P <port> -u <user> -p <database> > <output file>
+mysqldump -h <host> -P <port> -u <user> -p --databases <database> > <output file>
+mysqldump -h <host> -P <port> -u <user> -p <database> <table> > <output file>
+
+# Export database (Do not need to restore Global Transaction ID)
+mysqldump ... --set-gtid-purged=OFF <database> > <output file>
 
 # Restore database
 mysql -h <host> -P <port> -u <user> -p <database> < <input file>
@@ -31,4 +36,12 @@ show tables status;     # more detail
 
 # Show table detail
 desc <table>;
-show full columns from <table>;    # more detail
+show full columns from <table>; # more detail
+
+# Show system variables
+show global variables;          # global
+show session variables;         # current session
+
+# Show system status
+show global status;             # global
+show session status;            # current session
