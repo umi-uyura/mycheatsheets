@@ -12,6 +12,10 @@ rm $(go env GOPATH)/bin/<binary>
 # Uninstall module source cache
 [sudo] rm -rf $(go env GOMODCACHE)/<domain>/<user>/<package>@v*
 
+# Create new module project
+# module path example ... github.com/<user>/<repository>
+go mod init <module path>
+
 # Install or Update specific module
 go get <module>              # Install module
 go get -u <module>           # Update module
