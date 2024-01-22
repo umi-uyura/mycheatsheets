@@ -30,6 +30,12 @@ show databases;
 # Select database
 use <database>;
 
+# Create database
+create database <database>;
+
+# Delete database
+drop database <database>;
+
 # List tables
 show tables;
 show tables status;     # more detail
