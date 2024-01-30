@@ -51,3 +51,13 @@ show session variables;         # current session
 # Show system status
 show global status;             # global
 show session status;            # current session
+
+
+#
+# Tips
+#
+
+# Show version
+# - Alternate way: mysql --version
+SELECT version();
+
