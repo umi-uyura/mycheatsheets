@@ -6,6 +6,7 @@ tags: [git]
 #
 
 # Show config
+
 git config -l                   # local
 git config --global -l          # global
 git config --system -l          # system
@@ -14,6 +15,10 @@ git config --show-scope <attribute>
 git config --show-origin -l             # List with config file
 git config --show-origin <attribute>
 
+# Diff
+
+git diff --name-only <branch or commit>         # List of changed files
+git diff --name-status <branch or commit>       $ List of change status
 
 # Worktree
 
