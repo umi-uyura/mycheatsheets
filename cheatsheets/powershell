@@ -1,0 +1,14 @@
+---
+tags: [windows]
+---
+
+#
+# powershell - PowerShell
+#
+
+# Run .ps1 script without execution allowed
+powershell -ExecutionPolicy Bypass .\script.ps1
+
+# Show execution policies
+powershell Get-ExecutionPolicy
+powershell Get-ExecutionPolicy -List
