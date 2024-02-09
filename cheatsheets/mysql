@@ -61,3 +61,23 @@ show session status;            # current session
 # - Alternate way: mysql --version
 SELECT version();
 
+# Query database size
+SELECT table_schema,
+       floor(SUM(data_length + index_length) / 1024 / 1024) AS ALL_MB,
+       floor(SUM((data_length) / 1024 / 1024)) AS DATA_MB,
+       floor(SUM((index_length) / 1024 / 1024)) AS INDEX_MB
+FROM information_schema.tables
+GROUP BY table_schema
+ORDER BY sum(data_length + index_length) DESC;
+
+# Query table size
+SELECT table_name,
+       engine AS DB_ENGINE,
+       table_rows AS ROWS,
+       avg_row_length AS AVE_ROW_LENGTH,
+       floor((data_length+index_length) / 1024 / 1024) AS ALL_MB,
+       floor(data_length / 1024 / 1024) AS DATA_MB,
+       floor(index_length / 1024 / 1024) AS INDEX_MB
+FROM information_schema.tables
+WHERE table_schema = database()
+ORDER BY (data_length + index_length) DESC;
