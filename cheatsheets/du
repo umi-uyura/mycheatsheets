@@ -1,0 +1,13 @@
+---
+tags: [linux]
+---
+#
+# du - Disk Usage
+#
+
+# Human readable output
+du -h
+
+# Get size of the specified target
+du -sh .                        # Current directory
+du -sh <file or directory>
