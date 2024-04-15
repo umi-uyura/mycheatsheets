@@ -59,6 +59,10 @@ $ jq -r '.[] | .name.firstname + " " + .name.lastname'
 Taro Yamada
 Hanako Honda
 
+$ jq -r '.[] | "\(.name.lastname) \(.name.firstname)"'
+Taro Yamada
+Hanako Honda
+
 # Count string/array/object(key-value pair)
 $ jq '. | length'
 2
