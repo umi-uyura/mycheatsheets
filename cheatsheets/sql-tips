@@ -1,0 +1,6 @@
+---
+tags: [database]
+---
+
+# Make multiple lines of SQL into a single line
+cat file.sql | gsed -z 's/\n/ /g' | tr -s ' '
