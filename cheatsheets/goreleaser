@@ -1,0 +1,21 @@
+---
+tags: [golang]
+---
+#
+# GoReleaser
+# https://goreleaser.com/
+#
+
+# Generate config file
+goreleaser init
+
+# Check config
+goreleaser check
+
+# local-only release
+goreleaser release --snapshot [--clean]
+
+# Add tag and release
+git tag -a v0.1.0 -m "First release"
+git push origin v0.1.0
+goreleaser release [--clean]
