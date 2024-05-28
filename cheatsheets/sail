@@ -1,0 +1,36 @@
+---
+tags: [php,docker]
+---
+#
+# sail - Laravel sail command
+#
+
+# Eliminate './vendor/bin'
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+
+# Re-build sail image
+sail build --no-cache
+
+# Start sail in background
+sail up -d      # docker compose up -d
+
+# Stop sail
+sail stop
+
+# Enter application container
+sail shell
+
+# Run composer command
+sail composer <command>
+
+# Run artisan command
+sail artisan <command>
+
+# Run npm command
+sail npm <command>
+
+# Run PHPUnit
+sail test
+
+# View logs
+sail logs [container-id]
