@@ -1,0 +1,21 @@
+---
+tags: [linux]
+---
+
+#
+# vim tips
+#
+
+#
+# Visual mode
+#
+
+# Mode transition
+v       # Character selection mode
+V       # Line selection mode
+Ctrl+v  # Rectangle selection mode
+
+# Replace within selection (Operate on the command line)
+:'<,'>s/<original>/<replace>/g
+:'<,'>s/<original>/<replace>/gc         # Confirm execution
+
