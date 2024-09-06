@@ -1,0 +1,26 @@
+#
+# qiita - Qiita CLI
+#
+# https://github.com/increments/qiita-cli
+#
+
+# Initialize within the content management directory
+npm install @qiita/qiita-cli --save-dev
+npx qiita version       # Verify qiita-cli installation
+npx qiita init          # Setup
+npx qiita login         # twitterに認証する
+
+# Update qiita-cli
+npm install @qiita/qiita-cli@latest
+
+# Create article
+npx qiita new <file name>
+
+# Preview articles
+npx qiita preview
+
+# Publish article
+npx qiita publish <file name>
+
+# Syncing articles in Qiita
+npx qiita pull
