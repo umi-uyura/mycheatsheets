@@ -1,0 +1,42 @@
+---
+tags: [php,laravel]
+---
+#
+# artisan - Command line interface included with Laravel
+#
+
+#
+# Reference:
+# - https://artisan.page/ - The Laravel Artisan Cheatsheet
+#
+
+#
+# Migration
+#
+
+# Check migration status
+php artisan migrate:status
+
+# Generate migration file
+# - Generated file name: YYYY_MM_DD_HHMMSS_<base file name>.php
+php artisan make:migration <base file name>
+php artisan make:migration create_<table name>_table --create=<table name>
+php artisan make:migration add_<column name>_to_<table name> --table=<table name>
+php artisan make:migration drop_<column name>_to_<table name> --table=<table name>
+
+# Generate seeder file
+php artisan make:seeder <seed class name>
+php artisan db:seed --class=<seed class name>
+
+# Perform migration
+php artisan migrate                     # Run migration
+php artisan migrate --seed              # Run migration and run seeder
+php artisan migrate --pretend           # Dump migration sql query
+
+# Redo migration
+php artisan migrate:rollback            # Rollback migration
+php artisan migrate:rollback --step=3   # Rollback last 3 steps
+php artisan migrate:reset [--seed]      # Rollback all migration
+php artisan migrate:refresh [--seed]    # Run up() after down()
+php artisan migrate:refresh --step=3    # Run up() after down() for last 3 steps
+php artisan migrate:fresh [--seed]      # Drop all tables and run up()
