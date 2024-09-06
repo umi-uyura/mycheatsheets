@@ -1,0 +1,16 @@
+---
+tags: [amazon,aws]
+---
+#
+# AWS CLI
+#
+
+# Listing
+aws s3 ls                               # List buckets
+aws s3 ls <bucket name>                 # List files and directories in buckets
+aws s3 ls <bucket name>/<directory>
+
+# File move
+aws s3 mv <source path> <destination path>
+
+aws s3 [--dryrun] mv s3://<path/to/bucket/path>/ s3://<path/to/destination/path> --exclude "*" --include "*.txt" --recursive
