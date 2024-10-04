@@ -1,0 +1,10 @@
+---
+tags: [node,packaging]
+---
+#
+# nodenv
+# https://github.com/nodenv/nodenv
+#
+
+# Install Node 15 or lower on an M-series Mac
+arch -x86_64 nodenv install 15.x
