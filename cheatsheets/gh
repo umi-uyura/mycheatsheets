@@ -5,6 +5,10 @@ tags: [git]
 # gh - GitHub CLI
 #
 
+# View my pull request
+gh pr list -A "@me" [-w]                # Open PR
+gh pr list -A "@me" -s "merged" [-w]    # Merged PR
+
 # Create pull request
 # - Only one of body and template can be specified
 gh pr create --base <to> [--head <from>] --title <title>
