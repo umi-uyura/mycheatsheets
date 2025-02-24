@@ -10,7 +10,7 @@ Installation
 
 ```shell
 $ mkdir -p ~/.config/cheat/cheatsheets && cheat --init > ~/.config/cheat/conf.yml
-$ cd .config/cheat
+$ cd .config/cheat/cheatsheets
 
 $ git clone git@github.com:cheat/cheatsheets.git community
 $ git clone git@github.com:umi-uyura/mycheatsheets.git personal
