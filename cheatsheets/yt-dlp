@@ -1,0 +1,23 @@
+---
+tags: [video]
+---
+#
+# yt-dlp
+#
+
+# Download video
+yt-dlp <url or video id>
+
+# Show available formats
+yt-dlp -F <url or video id>
+
+# Specific format code
+# - FORMAT ... <video format id>+<audio format id>
+yt-dlp -f <FORMAT> <url or video id>
+
+# Load cookies from browser and download video
+yt-dlp --cookies-from-browser <browser> <url or video id>
+
+# Load cookies from file and download video
+# * Cookie file must be in Netscape format
+yt-dlp --cookies <cookie file> <url or video id>
