@@ -22,16 +22,18 @@ asdf install <package> <version>
 asdf uninstall <package> <version>
 
 # Set version
-asdf global <name> <version>    # global ($HOME/.tool-versions)
-asdf shell <name> <version>     # current shell ($ASDF_<LANG>_VERSION)
-asdf local <name> <version>     # local ($PWD/.tool-versions)
+asdf set <name> <version>       # current directory ($PWD/.tool-versions)
+asdf set -u <name> <version>    # user ($HOME/.tool-versions)
+asdf set -p <name> <version>    # current project (.tool-versions in the closest parent directory)
+
+asdf set [flag] <name> latest   # set latest version
 
 # Show current version
 asdf current
 asdf current <name>
 
 # Recreate shims
-asdf reshim <name> <version>
+asdf reshim [<name> <version>]
 
 
 ## Manage plugins - `asdf plugin`
