@@ -36,3 +36,11 @@ cat sample.json | jq '.data | length'
 
 # Convert number to string
 jq '(.number|tostring)'
+
+# Sort
+jq '.items | sort_by(.value)'
+jq '.items | sort_by(.value) | reverse'
+jq '.items | sort_by(.value1, .value2)'
+
+# Output csv
+jq '.items | [.id, .name] | @csv'

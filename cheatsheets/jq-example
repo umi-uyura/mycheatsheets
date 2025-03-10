@@ -69,6 +69,23 @@ $ jq '. | length'
 
 
 #
+# Sort
+#
+
+$ jq '. | sort_by(.timestamp)'
+1672412400
+1672498800
+
+$ jq '. | sort_by(.timestamp) | reverse'
+1672498800
+1672412400
+
+$ jq '. | sort_by(.timestamp, .id)'
+1672412400
+1672498800
+
+
+#
 # Convert
 #
 
@@ -76,3 +93,7 @@ $ jq '. | length'
 $ jq '.[].timestamp|tostring'
 "1672412400"
 "1672498800"
+
+$ jq -r '.[] | [.id, .timestamp] | @csv'
+1,1672412400
+2,1672498800
