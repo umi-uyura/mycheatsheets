@@ -1,0 +1,10 @@
+---
+tags: [network]
+---
+
+#
+# mitmproxy
+#
+
+mitmproxy -p <port>     # start mitmproxy
+mitmproxy -s <script>   # 
