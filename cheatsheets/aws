@@ -12,6 +12,13 @@ tags: [amazon,aws]
 # Profile
 #
 
+# Setup profile
+aws configure                                   # Default profile
+aws configure --profile <profile name>          # Specify profile name
+
+# List all profile
+aws configure list-profiles
+
 # List profile, access key, secret key, region
 aws configure list                              # default profile
 aws configure list --profile <profile name>     # specified profile
