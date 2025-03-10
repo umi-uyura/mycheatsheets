@@ -1,0 +1,23 @@
+---
+tags: [macos, network]
+---
+
+#
+# networksetup - configuration tool for network settings in System Preferences.
+#
+
+# List network services
+networksetup -listallnetworkservices
+
+
+## Proxy
+
+# Get proxy setting
+networksetup -getwebproxy <network services>
+
+# Set proxy setting
+networksetup -setwebproxy <network services> <proxy address> <proxy port>
+
+# Disable proxy setting
+networksetup -setwebproxystate <network services> off
+
