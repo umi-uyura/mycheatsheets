@@ -1,0 +1,12 @@
+---
+tags: [browser, debug]
+---
+
+# Start with security disabled
+#
+
+# Windows
+<chrome path> --user-data-dir="%TEMP%\dev_chrome_profile" --disable-web-security
+
+# macOS
+open -na "Google Chrome" --args --user-data-dir=/tmp/dev_chrome_profile --disable-web-security
