@@ -30,6 +30,9 @@ curl -X POST -H 'Content-Type: image/jpeg' --data-binary @<filepath>.jpg https:/
 # Post contents of json file as data
 curl -X POST -H "Content-Type: application/json" -d @<filepath>.json https://example.com
 
+# Output the time taken for processing
+curl -w "%{time_total}\n" https://example.com
+
 # Get my global IP address
 curl httpbin.org/ip
 curl inet-ip.info
