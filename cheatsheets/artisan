@@ -48,3 +48,19 @@ php artisan migrate:reset [--seed]      # Rollback all migration
 php artisan migrate:refresh [--seed]    # Run up() after down()
 php artisan migrate:refresh --step=3    # Run up() after down() for last 3 steps
 php artisan migrate:fresh [--seed]      # Drop all tables and run up()
+
+
+#
+# Queue
+#
+
+# Start queue
+php artisan queue:work
+php artisan queue:work --queue=<queue name>
+
+# Restart all queue
+php artisan queue:restart
+
+# Operation through supervisor
+sudo supervisorctl status                       # Check queue status
+sudo supervisorctl restart <queue name>:*       # Restart specify queue
