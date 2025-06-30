@@ -1,0 +1,17 @@
+---
+tags: [programming]
+---
+
+#
+# Claude Code CLI
+#
+
+# Start Claude
+claude
+
+# List sessions and resume
+claude -r
+claude --resume
+
+# Read prompts from file
+claude "$(cat prompts.md)"
